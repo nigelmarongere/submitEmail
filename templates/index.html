@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="UTF-8">
+       <title>Submit Email</title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+   </head> 
+   <body>
+       <h1>GWINで音楽を作る</h1>
+       <br>
+       <form action="hello" method="post">
+           {% for message in get_flashed_messages()%}
+                <p> {{message}}</p>
+            {% endfor %}
+           <br>
+           <input type="text" name="name_input" placeholder="name">
+           <br>
+           <input type="email" name="email_input" placeholder="email">
+           <br>
+           <input type="submit" value="Submit" id="info">
+       </form>
+   </body>
+</html>
