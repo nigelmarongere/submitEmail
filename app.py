@@ -11,5 +11,5 @@ def index():
 
 @app.route("/hello", methods=["POST", "GET"])
 def hello():
-    flash("Hey " + str(request.form['name_input']) + ", I'll be in touch soon!")
+    flash("Hey " + str(request.form['name_input']) + ", I'll be in touch soon! You can also reach me at nigelmarongere@gmail.com")
     return render_template("index.html")
